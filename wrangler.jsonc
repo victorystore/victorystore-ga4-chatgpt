@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "victorystore-ga4-chatgpt",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-26",
+  "compatibility_flags": ["nodejs_compat"],
+  "services": [
+    {
+      "binding": "GA4_BACKEND",
+      "service": "victorystore-ga4-mcp"
+    }
+  ]
+}
