@@ -6,9 +6,9 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.30.0",
-    "@modelcontextprotocol/server": "2.0.0",
-    "agents": "*",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@modelcontextprotocol/server": "2.4.0",
+    "agents": "0.34.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
