@@ -201,6 +201,27 @@ function createServer(env: Env) {
     }
   );
 
+  server.registerTool(
+    "get_ga4_events",
+    {
+      description:
+        "Get VictoryStore GA4 event counts, total users, and key events by event name for a date range. Includes ecommerce and other tracked events; check the truncated flag.",
+      inputSchema: commonInput
+    },
+    async ({ startDate, endDate }) => {
+      const data = await getBackendData(env, "/events", startDate, endDate);
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(data, null, 2)
+          }
+        ]
+      };
+    }
+  );
+
   return server;
 }
 
